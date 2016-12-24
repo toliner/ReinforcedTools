@@ -1,0 +1,160 @@
+Starting Build
+Settings evaluated using empty settings script.
+Projects loaded. Root project using build file 'C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build.gradle'.
+Included projects: [root project '1.7.10']
+Evaluating root project '1.7.10' using build file 'C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build.gradle'.
+****************************
+ Powered By MCP:             
+ http://modcoderpack.com/    
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : unknown
+****************************
+All projects evaluated.
+Selected primary task 'DefaultTaskParameter{taskName='build',projectPath='null'}'
+Tasks to be executed: [task ':compileApiKotlin', task ':compileApiJava', task ':copyApiKotlinClasses', task ':processApiResources', task ':apiClasses', task ':compileKotlin', task ':sourceMainJava', task ':compileJava', task ':copyMainKotlinClasses', task ':processResources', task ':classes', task ':jar', task ':compileTestKotlin', task ':compileTestJava', task ':copyTestKotlinClasses', task ':processTestResources', task ':testClasses', task ':test', task ':extractMcpData', task ':getVersionJson', task ':extractUserDev', task ':genSrgs', task ':reobf', task ':assemble', task ':check', task ':build']
+:compileApiKotlin (Thread[main,5,main]) started.
+:compileApiKotlin
+Skipping task ':compileApiKotlin' as it has no source files.
+:compileApiKotlin UP-TO-DATE
+:compileApiKotlin (Thread[main,5,main]) completed. Took 0.01 secs.
+:compileApiJava (Thread[main,5,main]) started.
+:compileApiJava
+Skipping task ':compileApiJava' as it has no source files.
+:compileApiJava UP-TO-DATE
+:compileApiJava (Thread[main,5,main]) completed. Took 0.001 secs.
+:copyApiKotlinClasses (Thread[main,5,main]) started.
+:copyApiKotlinClasses
+Skipping task ':copyApiKotlinClasses' as it is up-to-date (took 0.016 secs).
+:copyApiKotlinClasses UP-TO-DATE
+:copyApiKotlinClasses (Thread[main,5,main]) completed. Took 0.017 secs.
+:processApiResources (Thread[main,5,main]) started.
+:processApiResources
+Skipping task ':processApiResources' as it has no source files.
+:processApiResources UP-TO-DATE
+:processApiResources (Thread[main,5,main]) completed. Took 0.0 secs.
+:apiClasses (Thread[main,5,main]) started.
+:apiClasses
+Skipping task ':apiClasses' as it has no actions.
+:apiClasses UP-TO-DATE
+:apiClasses (Thread[main,5,main]) completed. Took 0.001 secs.
+:compileKotlin (Thread[main,5,main]) started.
+:compileKotlin
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net//forgeSrc/1.7.10-10.13.4.1558-1.7.10/forgeSrc-1.7.10-10.13.4.1558-1.7.10.pom]
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.pom]
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.pom]
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom]
+Executing task ':compileKotlin' (up-to-date check took 2.479 secs) due to:
+  Input file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry.kt has changed.
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry.kt: (88, 17): Parameter 'event' is never used
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry.kt: (107, 14): Parameter 'event' is never used
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\Render.kt: (25, 13): Variable 'renderManager' is never used
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\Render.kt: (45, 13): Variable 'irInstance' is never used
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\client\BowRenderer.kt: (26, 13): Variable 'renderManager' is never used
+w: C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\java\c6h2cl2\ReinforcedTools\client\BowRenderer.kt: (45, 13): Variable 'irInstance' is never used
+[KOTLIN] Compilation succeeded
+:compileKotlin (Thread[main,5,main]) completed. Took 8.018 secs.
+:sourceMainJava (Thread[main,5,main]) started.
+:sourceMainJava
+Skipping task ':sourceMainJava' as it is up-to-date (took 0.003 secs).
+:sourceMainJava UP-TO-DATE
+:sourceMainJava (Thread[main,5,main]) completed. Took 0.003 secs.
+:compileJava (Thread[main,5,main]) started.
+:compileJava
+Skipping task ':compileJava' as it has no source files.
+:compileJava UP-TO-DATE
+:compileJava (Thread[main,5,main]) completed. Took 0.001 secs.
+:copyMainKotlinClasses (Thread[main,5,main]) started.
+:copyMainKotlinClasses
+Executing task ':copyMainKotlinClasses' (up-to-date check took 0.012 secs) due to:
+  Input file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build\kotlin-classes\main\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry$tabReinforcedTools$1.class has changed.
+  Input file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build\kotlin-classes\main\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry.class has changed.
+:copyMainKotlinClasses (Thread[main,5,main]) completed. Took 0.042 secs.
+:processResources (Thread[main,5,main]) started.
+:processResources
+Executing task ':processResources' (up-to-date check took 0.04 secs) due to:
+  Input file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\src\main\resources\assets\reinforcedtools\lang\ja_JP.lang has changed.
+:processResources (Thread[main,5,main]) completed. Took 0.4 secs.
+:classes (Thread[main,5,main]) started.
+:classes
+Skipping task ':classes' as it has no actions.
+:classes (Thread[main,5,main]) completed. Took 0.0 secs.
+:jar (Thread[main,5,main]) started.
+:jar
+Executing task ':jar' (up-to-date check took 0.023 secs) due to:
+  Output file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build\libs\ReinforcedTools-2.0.0 - 1.7.10.jar has changed.
+:jar (Thread[main,5,main]) completed. Took 0.094 secs.
+:compileTestKotlin (Thread[main,5,main]) started.
+:compileTestKotlin
+Skipping task ':compileTestKotlin' as it has no source files.
+:compileTestKotlin UP-TO-DATE
+:compileTestKotlin (Thread[main,5,main]) completed. Took 0.0 secs.
+:compileTestJava (Thread[main,5,main]) started.
+:compileTestJava
+Skipping task ':compileTestJava' as it has no source files.
+:compileTestJava UP-TO-DATE
+:compileTestJava (Thread[main,5,main]) completed. Took 0.001 secs.
+:copyTestKotlinClasses (Thread[main,5,main]) started.
+:copyTestKotlinClasses
+Skipping task ':copyTestKotlinClasses' as it is up-to-date (took 0.001 secs).
+:copyTestKotlinClasses UP-TO-DATE
+:copyTestKotlinClasses (Thread[main,5,main]) completed. Took 0.001 secs.
+:processTestResources (Thread[main,5,main]) started.
+:processTestResources
+Skipping task ':processTestResources' as it has no source files.
+:processTestResources UP-TO-DATE
+:processTestResources (Thread[main,5,main]) completed. Took 0.001 secs.
+:testClasses (Thread[main,5,main]) started.
+:testClasses
+Skipping task ':testClasses' as it has no actions.
+:testClasses UP-TO-DATE
+:testClasses (Thread[main,5,main]) completed. Took 0.0 secs.
+:test (Thread[main,5,main]) started.
+:test
+file or directory 'C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build\classes\test', not found
+Skipping task ':test' as it has no source files.
+:test UP-TO-DATE
+:test (Thread[main,5,main]) completed. Took 0.001 secs.
+:extractMcpData (Thread[main,5,main]) started.
+:extractMcpData
+Skipping task ':extractMcpData' as it is up-to-date (took 0.002 secs).
+:extractMcpData UP-TO-DATE
+:extractMcpData (Thread[main,5,main]) completed. Took 0.002 secs.
+:getVersionJson (Thread[main,5,main]) started.
+:getVersionJson
+Executing task ':getVersionJson' (up-to-date check took 0.0 secs) due to:
+  Task has not declared any outputs.
+:getVersionJson (Thread[main,5,main]) completed. Took 0.412 secs.
+:extractUserDev (Thread[main,5,main]) started.
+:extractUserDev
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/forge-1.7.10-10.13.4.1558-1.7.10.pom]
+Skipping task ':extractUserDev' as it is up-to-date (took 1.299 secs).
+:extractUserDev UP-TO-DATE
+:extractUserDev (Thread[main,5,main]) completed. Took 1.301 secs.
+:genSrgs (Thread[main,5,main]) started.
+:genSrgs
+Skipping task ':genSrgs' as task onlyIf is false.
+:genSrgs SKIPPED
+:genSrgs (Thread[main,5,main]) completed. Took 0.195 secs.
+:reobf (Thread[main,5,main]) started.
+:reobf
+Executing task ':reobf' (up-to-date check took 0.002 secs) due to:
+  Output file C:\GitHub\ReinforcedTools\ReinforcedTools v2\1.7.10\build\libs\ReinforcedTools-2.0.0 - 1.7.10.jar has changed.
+:reobf (Thread[main,5,main]) completed. Took 1.15 secs.
+:assemble (Thread[main,5,main]) started.
+:assemble
+Skipping task ':assemble' as it has no actions.
+:assemble (Thread[main,5,main]) completed. Took 0.0 secs.
+:check (Thread[main,5,main]) started.
+:check
+Skipping task ':check' as it has no actions.
+:check UP-TO-DATE
+:check (Thread[main,5,main]) completed. Took 0.0 secs.
+:build (Thread[main,5,main]) started.
+:build
+Skipping task ':build' as it has no actions.
+:build (Thread[main,5,main]) completed. Took 0.0 secs.
+
+BUILD SUCCESSFUL
+
+Total time: 16.541 secs
