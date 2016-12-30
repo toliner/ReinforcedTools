@@ -4,7 +4,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -15,7 +14,6 @@ hs_err_pid*
 out
 *.ipr
 *.iws
-*.iml
 .idea
 
 # other
@@ -23,6 +21,7 @@ eclipse
 run
 build/
 .gradle/
-gradle/
 gradlew
 buildlog*
+src/main/resources/assets/reinforcedtools/textures
+src/main/resources/mcmod.info
