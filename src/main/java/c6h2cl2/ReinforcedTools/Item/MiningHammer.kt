@@ -13,34 +13,34 @@ import net.minecraft.item.ItemTool
 /**
  * @author C6H2Cl2
  */
-class MiningHammer(material:Item.ToolMaterial,name:String) :ItemTool(-material.damageVsEntity+1,material,null),IReinforcedTools{
+class MiningHammer(material: Item.ToolMaterial, name: String) : ItemTool(-material.damageVsEntity + 1, material, null), IReinforcedTools {
     init {
         unlocalizedName = "${name.toLowerCase()}MiningHammer"
         setTextureName("${ReinforcedToolsCore.Domain}:${name.toLowerCase()}MiningHammer")
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
         maxDamage *= 6
         efficiencyOnProperMaterial *= 1.8f
-        for (toolClass in getToolClasses(null)){
-            setHarvestLevel(toolClass,material.harvestLevel+1)
+        for (toolClass in getToolClasses(null)) {
+            setHarvestLevel(toolClass, material.harvestLevel + 1)
         }
     }
 
     override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
         val level = (enchantLevel.toFloat() * 1.2f).toInt()
-        itemStack.addEnchantment(Enchantment.efficiency,level)
-        itemStack.addEnchantment(Enchantment.fortune,level)
-        itemStack.addEnchantment(Enchantment.unbreaking,level)
+        itemStack.addEnchantment(Enchantment.efficiency, level)
+        itemStack.addEnchantment(Enchantment.fortune, level)
+        itemStack.addEnchantment(Enchantment.unbreaking, level)
         return itemStack
     }
 
     override fun getToolType() = EnumToolType.MININGHAMMER
 
-    override fun getToolClasses(stack: ItemStack?) = mutableSetOf("pickaxe","shovel","hammer","mininghammer","Pickaxe","Shovel","Hammer","MiningHammer","miningHammer")
+    override fun getToolClasses(stack: ItemStack?) = mutableSetOf("pickaxe", "shovel", "hammer", "mininghammer", "Pickaxe", "Shovel", "Hammer", "MiningHammer", "miningHammer")
 
     override fun func_150893_a(itemStack: ItemStack?, block: Block): Float {
-        return if(itemStack != null && ReinforcedToolsCore.isToolEffective(itemStack,block,0)){
+        return if (itemStack != null && ReinforcedToolsCore.isToolEffective(itemStack, block, 0)) {
             efficiencyOnProperMaterial
-        }else{
+        } else {
             1f
         }
     }
@@ -50,13 +50,13 @@ class MiningHammer(material:Item.ToolMaterial,name:String) :ItemTool(-material.d
     }
 
     override fun func_150897_b(block: Block): Boolean {
-        return canHarvestBlock(block,null)
+        return canHarvestBlock(block, null)
     }
 
     override fun getDigSpeed(itemStack: ItemStack?, block: Block, meta: Int): Float {
-        return if(itemStack != null && ReinforcedToolsCore.isToolEffective(itemStack,block,0)){
+        return if (itemStack != null && ReinforcedToolsCore.isToolEffective(itemStack, block, 0)) {
             efficiencyOnProperMaterial
-        }else{
+        } else {
             1f
         }
     }

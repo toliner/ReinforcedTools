@@ -12,14 +12,14 @@ import net.minecraft.item.ItemSword
 /**
  * @author C6H2Cl2
  */
-class WeaponSword(material:Item.ToolMaterial,name:String) :ItemSword(material) ,IReinforcedTools{
+class WeaponSword(material: Item.ToolMaterial, name: String) : ItemSword(material), IReinforcedTools {
     init {
         unlocalizedName = "reinforced${name}Sword"
-        setTextureName(ReinforcedToolsCore.Domain+":reinforced"+name+"Sword")
+        setTextureName(ReinforcedToolsCore.Domain + ":reinforced" + name + "Sword")
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
     }
 
-    override fun getEnchanted(itemStack: ItemStack, enchantLevel:Int): ItemStack {
+    override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
         itemStack.addEnchantment(Enchantment.sharpness, enchantLevel)
         itemStack.addEnchantment(Enchantment.looting, enchantLevel)
         itemStack.addEnchantment(Enchantment.unbreaking, enchantLevel)

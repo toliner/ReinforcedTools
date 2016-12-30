@@ -13,16 +13,16 @@ import net.minecraftforge.client.event.FOVUpdateEvent
 class FOVEvent {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
-    fun updateFOV(event : FOVUpdateEvent){
+    fun updateFOV(event: FOVUpdateEvent) {
         val player = event.entity
         val item = player.itemInUse
-        if(item?.item == ReinforcedToolsRegistry.compositeBow){
+        if (item?.item == ReinforcedToolsRegistry.compositeBow) {
             var f = player.itemInUseDuration / 20.0f
-            f =if(f > 1.0f) 1.0f else f*f
+            f = if (f > 1.0f) 1.0f else f * f
             event.newfov *= 1.0f - f * 0.2f
-        }else if (item?.item == ReinforcedToolsRegistry.longBow){
+        } else if (item?.item == ReinforcedToolsRegistry.longBow) {
             var f = player.itemInUseDuration / 100.0f
-            f = if(f > 1.0f) 1.0f else f*f
+            f = if (f > 1.0f) 1.0f else f * f
             event.newfov *= 1.0f - f * 0.6f
         }
     }

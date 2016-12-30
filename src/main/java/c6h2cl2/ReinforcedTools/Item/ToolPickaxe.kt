@@ -12,14 +12,14 @@ import net.minecraft.item.ItemStack
 /**
  * @author C6H2Cl2
  */
-class ToolPickaxe(material:ToolMaterial,name:String) :ItemPickaxe(material), IReinforcedTools{
+class ToolPickaxe(material: ToolMaterial, name: String) : ItemPickaxe(material), IReinforcedTools {
     init {
         unlocalizedName = "reinforced" + name + "Pickaxe"
-        setTextureName(ReinforcedToolsCore.Domain+":reinforced"+name+"Pickaxe")
+        setTextureName(ReinforcedToolsCore.Domain + ":reinforced" + name + "Pickaxe")
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
     }
 
-    override fun getEnchanted(itemStack: ItemStack, enchantLevel:Int): ItemStack {
+    override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
         itemStack.addEnchantment(Enchantment.efficiency, enchantLevel)
         itemStack.addEnchantment(Enchantment.fortune, enchantLevel)
         itemStack.addEnchantment(Enchantment.unbreaking, enchantLevel)

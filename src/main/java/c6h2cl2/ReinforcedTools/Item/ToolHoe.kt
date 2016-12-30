@@ -12,14 +12,14 @@ import net.minecraft.item.ItemStack
 /**
  * @author C6H2Cl2
  */
-class ToolHoe(material:Item.ToolMaterial,name:String) :ItemHoe(material),IReinforcedTools{
+class ToolHoe(material: Item.ToolMaterial, name: String) : ItemHoe(material), IReinforcedTools {
     init {
         unlocalizedName = "reinforced" + name + "Hoe"
-        setTextureName(ReinforcedToolsCore.Domain+":reinforced"+name+"Hoe")
+        setTextureName(ReinforcedToolsCore.Domain + ":reinforced" + name + "Hoe")
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
     }
 
-    override fun getEnchanted(itemStack: ItemStack, enchantLevel:Int): ItemStack {
+    override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
         itemStack.addEnchantment(Enchantment.efficiency, enchantLevel)
         itemStack.addEnchantment(Enchantment.fortune, enchantLevel)
         itemStack.addEnchantment(Enchantment.unbreaking, enchantLevel)

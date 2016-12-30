@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack
 /**
  * @author C6H2Cl2
  */
-class ToolAxe(material:Item.ToolMaterial,name:String) :ItemAxe(material),IReinforcedTools {
+class ToolAxe(material: Item.ToolMaterial, name: String) : ItemAxe(material), IReinforcedTools {
     init {
         unlocalizedName = "reinforced" + name + "Axe"
         setTextureName("${ReinforcedToolsCore.Domain}:reinforced${name}Axe")
@@ -20,7 +20,7 @@ class ToolAxe(material:Item.ToolMaterial,name:String) :ItemAxe(material),IReinfo
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
     }
 
-    override fun getEnchanted(itemStack: ItemStack, enchantLevel:Int):ItemStack{
+    override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
         itemStack.addEnchantment(Enchantment.efficiency, enchantLevel)
         itemStack.addEnchantment(Enchantment.fortune, enchantLevel)
         itemStack.addEnchantment(Enchantment.unbreaking, enchantLevel)

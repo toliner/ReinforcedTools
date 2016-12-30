@@ -12,12 +12,12 @@ import java.io.File
 /**
  * @author C6H2Cl2
  */
-class ClientProxy :CommonProxy(){
+class ClientProxy : CommonProxy() {
     override fun getDir(): File = Minecraft.getMinecraft().mcDataDir
     override fun getPlayerEntityInstance(): EntityPlayer? = Minecraft.getMinecraft().thePlayer
-    @SideOnly(Side.CLIENT)
-    fun registerRender(){
-        MinecraftForgeClient.registerItemRenderer(ReinforcedToolsRegistry.shortBow,BowRenderer())
-        MinecraftForgeClient.registerItemRenderer(ReinforcedToolsRegistry.compositeBow,BowRenderer())
+    //@SideOnly(Side.CLIENT)
+    fun registerRender() {
+        MinecraftForgeClient.registerItemRenderer(ReinforcedToolsRegistry.shortBow, BowRenderer())
+        MinecraftForgeClient.registerItemRenderer(ReinforcedToolsRegistry.compositeBow, BowRenderer())
     }
 }

@@ -14,44 +14,44 @@ import net.minecraftforge.common.ForgeHooks
 /**
  * @author C6H2Cl2
  */
-class BattleAxe(material: ToolMaterial,name:String) :ItemTool(8.0f,material,null),IReinforcedTools{
+class BattleAxe(material: ToolMaterial, name: String) : ItemTool(8.0f, material, null), IReinforcedTools {
     init {
         unlocalizedName = "${name.toLowerCase()}BattleAxe"
         setTextureName("${ReinforcedToolsCore.Domain}:${name.toLowerCase()}BattleAxe")
         creativeTab = ReinforcedToolsRegistry.tabReinforcedTools
         efficiencyOnProperMaterial *= 0.7f
         maxDamage = material.maxUses * 3
-        for (toolClass in getToolClasses(ItemStack(this))){
-            setHarvestLevel(toolClass,material.harvestLevel)
+        for (toolClass in getToolClasses(ItemStack(this))) {
+            setHarvestLevel(toolClass, material.harvestLevel)
         }
     }
 
     override fun getEnchanted(itemStack: ItemStack, enchantLevel: Int): ItemStack {
-        val level1 = (enchantLevel.toFloat()/ 5f * 1f).toInt()
-        val level3 = (enchantLevel.toFloat()/ 5f * 3f).toInt()
-        val level7 = (enchantLevel.toFloat()/ 5f * 7f).toInt()
-        itemStack.addEnchantment(Enchantment.sharpness,level7)
-        itemStack.addEnchantment(Enchantment.efficiency,level1)
-        itemStack.addEnchantment(Enchantment.looting,level3)
-        itemStack.addEnchantment(Enchantment.unbreaking,enchantLevel)
+        val level1 = (enchantLevel.toFloat() / 5f * 1f).toInt()
+        val level3 = (enchantLevel.toFloat() / 5f * 3f).toInt()
+        val level7 = (enchantLevel.toFloat() / 5f * 7f).toInt()
+        itemStack.addEnchantment(Enchantment.sharpness, level7)
+        itemStack.addEnchantment(Enchantment.efficiency, level1)
+        itemStack.addEnchantment(Enchantment.looting, level3)
+        itemStack.addEnchantment(Enchantment.unbreaking, enchantLevel)
         return itemStack
     }
 
     override fun getToolType(): EnumToolType = EnumToolType.BATTLEAXE
 
     override fun getToolClasses(stack: ItemStack?): MutableSet<String> {
-        return mutableSetOf("axe","sword","battleaxe","Axe","Sword","BattleAxe","battleAxe")
+        return mutableSetOf("axe", "sword", "battleaxe", "Axe", "Sword", "BattleAxe", "battleAxe")
     }
 
     override fun hitEntity(itemStack: ItemStack, targetEntity: EntityLivingBase?, player: EntityLivingBase?): Boolean {
-        itemStack.damageItem(1,player)
+        itemStack.damageItem(1, player)
         return true
     }
 
     override fun func_150893_a(itemStack: ItemStack?, block: Block): Float {
-        return if(itemStack != null && ForgeHooks.isToolEffective(itemStack,block,0)){
+        return if (itemStack != null && ForgeHooks.isToolEffective(itemStack, block, 0)) {
             efficiencyOnProperMaterial
-        }else{
+        } else {
             0f
         }
     }
