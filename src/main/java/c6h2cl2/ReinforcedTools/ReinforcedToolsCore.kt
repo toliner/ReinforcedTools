@@ -19,7 +19,7 @@ import java.io.File
  * @author C6H2Cl2
  */
 
-@Mod(modid = ReinforcedToolsCore.ModID, useMetadata = true, dependencies = "required-after:YukariLib@[1.0.0,)")
+@Mod(modid = ReinforcedToolsCore.ModID, useMetadata = true, dependencies = "required-after:YukariLib@[1.0.2,)")
 class ReinforcedToolsCore {
     companion object {
         const val ModID = "ReinforcedTools"
