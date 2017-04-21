@@ -1,4 +1,5 @@
 buildscript {
+    ext.kotlin_version = '1.1.1'
     repositories {
         mavenCentral()
         maven {
@@ -10,13 +11,13 @@ buildscript {
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
         maven {
-            name = "kotlin"
-            url = "http://dl.bintray.com/kotlin/kotlin-eap-1.1/"
+            name = "CurseForge"
+            url = "https://minecraft.curseforge.com/api/maven/"
         }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1-M04'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -30,7 +31,7 @@ tasks.withType(Jar) {
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"
 
-version = "2.0.1 - 1.7.10"
+version = "2.1.0 - 1.7.10"
 group = "c6h2cl2"
 archivesBaseName = "ReinforcedTools"
 
@@ -41,13 +42,16 @@ minecraft {
 
 repositories {
     maven {
-        name = "kotlin"
-        url = "http://dl.bintray.com/kotlin/kotlin-eap-1.1/"
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
     }
 }
 
 dependencies {
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1-M04'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile 'yukarilib:YukariLib-1.7.10:release:dev'
+    runtime 'notenoughitems:NotEnoughItems-1.7.10:release:universal'
+    runtime 'codechickencore:CodeChickenCore-1.7.10:release:universal'
 }
 
 processResources

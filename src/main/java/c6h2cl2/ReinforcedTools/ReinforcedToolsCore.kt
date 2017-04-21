@@ -19,12 +19,12 @@ import java.io.File
  * @author C6H2Cl2
  */
 
-@Mod(modid = ReinforcedToolsCore.ModID, useMetadata = true, dependencies = "required-after:YukariLib@[1.0.2,)")
+@Mod(modid = ReinforcedToolsCore.Domain,name = ReinforcedToolsCore.ModID, version = ReinforcedToolsCore.Version ,useMetadata = true, dependencies = "required-after:YukariLib@[1.2.0,)")
 class ReinforcedToolsCore {
     companion object {
         const val ModID = "ReinforcedTools"
         const val Domain = "reinforcedtools"
-        const val Version = "2.0.1"
+        const val Version = "2.0.2"
         @Mod.Metadata
         var meta: ModMetadata? = null
         @SidedProxy(clientSide = "c6h2cl2.ReinforcedTools.client.ClientProxy", serverSide = "c6h2cl2.ReinforcedTools.common.CommonProxy")

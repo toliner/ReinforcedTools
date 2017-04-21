@@ -13,13 +13,10 @@ import net.minecraft.init.Blocks
 import net.minecraft.init.Items
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraftforge.client.MinecraftForgeClient
-import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.common.util.EnumHelper
 import net.minecraftforge.oredict.OreDictionary
 import org.jetbrains.annotations.Contract
 import java.util.*
-import javax.tools.Tool
 
 /**
  * @author C6H2Cl2
@@ -44,24 +41,24 @@ object ReinforcedToolsRegistry {
     val paxelDiamond = EnumHelper.addToolMaterial("paxelDiamond", 5, reinforcedDiamond.maxUses * 5, 24.0F, 8.0F, 40).setRepairItem(ItemStack(Blocks.diamond_block))!!
 
     //Toolのコレクション
-    val Axe = LinkedList<ToolAxe>(mutableListOf(ToolAxe(reinforcedWood, "Wooden"),
+    val Axe = LinkedList<ToolAxe>(listOf(ToolAxe(reinforcedWood, "Wooden"),
             ToolAxe(reinforcedStone, "Stone"), ToolAxe(reinforcedIron, "Iron"),
             ToolAxe(reinforcedGold, "Gold"), ToolAxe(reinforcedDiamond, "Diamond")))
-    val Pickaxe = LinkedList<ToolPickaxe>(mutableListOf(ToolPickaxe(reinforcedWood, "Wooden"),
+    val Pickaxe = LinkedList<ToolPickaxe>(listOf(ToolPickaxe(reinforcedWood, "Wooden"),
             ToolPickaxe(reinforcedStone, "Stone"), ToolPickaxe(reinforcedIron, "Iron"),
             ToolPickaxe(reinforcedGold, "Gold"), ToolPickaxe(reinforcedDiamond, "Diamond")))
-    val Shovel = LinkedList<ToolShovel>(mutableListOf(ToolShovel(reinforcedWood, "Wooden"),
+    val Shovel = LinkedList<ToolShovel>(listOf(ToolShovel(reinforcedWood, "Wooden"),
             ToolShovel(reinforcedStone, "Stone"), ToolShovel(reinforcedIron, "Iron"),
             ToolShovel(reinforcedGold, "Gold"), ToolShovel(reinforcedDiamond, "Diamond")))
-    val Hoe = LinkedList<ToolHoe>(mutableListOf(ToolHoe(reinforcedWood, "Wooden"),
+    val Hoe = LinkedList<ToolHoe>(listOf(ToolHoe(reinforcedWood, "Wooden"),
             ToolHoe(reinforcedStone, "Stone"), ToolHoe(reinforcedIron, "Iron"),
             ToolHoe(reinforcedGold, "Gold"), ToolHoe(reinforcedDiamond, "Diamond")))
-    val Sword = LinkedList<WeaponSword>(mutableListOf(WeaponSword(reinforcedWood, "Wooden"),
+    val Sword = LinkedList<WeaponSword>(listOf(WeaponSword(reinforcedWood, "Wooden"),
             WeaponSword(reinforcedStone, "Stone"), WeaponSword(reinforcedIron, "Iron"),
             WeaponSword(reinforcedGold, "Gold"), WeaponSword(reinforcedDiamond, "Diamond")))
-    val Paxel = LinkedList<ToolPaxel>(mutableListOf(ToolPaxel(paxelIron, "iron"), ToolPaxel(paxelGold, "gold"), ToolPaxel(paxelDiamond, "diamond")))
-    val BattleAxes = LinkedList<BattleAxe>(mutableListOf(BattleAxe(reinforcedIron, "iron"), BattleAxe(reinforcedGold, "gold"), BattleAxe(reinforcedDiamond, "diamond")))
-    val MiningHammers = LinkedList<MiningHammer>(mutableListOf(MiningHammer(reinforcedIron, "iron"), MiningHammer(reinforcedGold, "gold"), MiningHammer(reinforcedDiamond, "diamond")))
+    val Paxel = LinkedList<ToolPaxel>(listOf(ToolPaxel(paxelIron, "iron"), ToolPaxel(paxelGold, "gold"), ToolPaxel(paxelDiamond, "diamond")))
+    val BattleAxes = LinkedList<BattleAxe>(listOf(BattleAxe(reinforcedIron, "iron"), BattleAxe(reinforcedGold, "gold"), BattleAxe(reinforcedDiamond, "diamond")))
+    val MiningHammers = LinkedList<MiningHammer>(listOf(MiningHammer(reinforcedIron, "iron"), MiningHammer(reinforcedGold, "gold"), MiningHammer(reinforcedDiamond, "diamond")))
     //弓
     val shortBow = ShortBow()
     val compositeBow = CompositeBow()
@@ -127,7 +124,7 @@ object ReinforcedToolsRegistry {
     //Util関数s
     //コレクションのアイテム登録
     private fun registerListItems(items: List<Item>) {
-        for (item in items) run {
+        for (item in items) {
             GameRegistry.registerItem(item, item.unlocalizedName)
         }
     }
@@ -136,6 +133,7 @@ object ReinforcedToolsRegistry {
     private fun addReinforcedToolRecipe(reinforcedTools: List<IReinforcedTools>, materials: Array<ItemStack>) {
         addToolRecipe(reinforcedTools, materials)
         addToolEnchantRecipe(reinforcedTools, materials)
+        addSilkTouchRecipe(reinforcedTools)
     }
 
     //Toolのレシピ追加
@@ -180,6 +178,23 @@ object ReinforcedToolsRegistry {
             val level = levels[index]
             if (level > 0) {
                 GameRegistry.addRecipe(tool.getEnchanted(tool as Item, level), "MMM", "MTM", "MMM", 'M', materials[index], 'T', ItemStack(tool, 2, OreDictionary.WILDCARD_VALUE))
+            }
+        }
+    }
+
+    private fun addSilkTouchRecipe(reinforcedTools: List<IReinforcedTools>) {
+        val type = reinforcedTools[0].getToolType()
+        reinforcedTools.forEachIndexed { index, tool ->
+            val i = if (type.isHighLevelTool) index + 2 else index
+            val level = levels[i]
+            if (level > 0){
+                var stack = ItemStack(tool as Item)
+                stack.addEnchantment(Enchantment.silkTouch, 1)
+                GameRegistry.addRecipe(stack, "MMM", "MTM", "MMM", 'M', Blocks.emerald_block, 'T', ItemStack(tool))
+                /*stack = tool.getEnchanted(tool, level)
+                val stack_silk = stack.copy()
+                stack_silk.addEnchantment(Enchantment.silkTouch, 1)
+                GameRegistry.addRecipe(stack_silk, "MMM", "MTM", "MMM", 'M', Blocks.emerald_block, 'T', stack)*/
             }
         }
     }
