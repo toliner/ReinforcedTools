@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " X ",
+    "#X ",
+    "## "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:wooden_axe"
+    }
+  },
+  "result": {
+    "item": "reinforcedtools:reinforcedwoodenaxe"
+  }
+}

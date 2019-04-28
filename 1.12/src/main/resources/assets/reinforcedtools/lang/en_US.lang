@@ -1,0 +1,71 @@
+itemGroup.reinforcedTools=Reinforced Tools
+#木製ツール
+item.reinforcedWoodenAxe.name=Reinforced Wooden Axe
+item.reinforcedWoodenPickaxe.name=Reinforced Wooden Pickaxe
+item.reinforcedWoodenShovel.name=Reinforced Wooden Shovel
+item.reinforcedWoodenSword.name=Reinforced Wooden Sword
+item.reinforcedWoodenHoe.name=Reinforced Wooden Hoe
+#石製ツール
+item.reinforcedStoneAxe.name=Reinforced Stone Axe
+item.reinforcedStonePickaxe.name=Reinforced Stone Pickaxe
+item.reinforcedStoneShovel.name=Reinforced Stone Shovel
+item.reinforcedStoneSword.name=Reinforced Stone Sword
+item.reinforcedStoneHoe.name=Reinforced Stone Hoe
+#鉄製ツール
+item.reinforcedIronAxe.name=Reinforced Iron Axe
+item.reinforcedIronPickaxe.name=Reinforced Iron Pickaxe
+item.reinforcedIronShovel.name=Reinforced Iron Shovel
+item.reinforcedIronSword.name=Reinforced Iron Sword
+item.reinforcedIronHoe.name=Reinforced Iron Hoe
+#金製ツール
+item.reinforcedGoldAxe.name=Reinforced Gold Axe
+item.reinforcedGoldPickaxe.name=Reinforced Gold Pickaxe
+item.reinforcedGoldShovel.name=Reinforced Gold Shovel
+item.reinforcedGoldSword.name=Reinforced Gold Sword
+item.reinforcedGoldHoe.name=Reinforced Gold Hoe
+#ダイヤ製ツール
+item.reinforcedDiamondAxe.name=Reinforced Diamond Axe
+item.reinforcedDiamondPickaxe.name=Reinforced Diamond Pickaxe
+item.reinforcedDiamondShovel.name=Reinforced Diamond Shovel
+item.reinforcedDiamondSword.name=Reinforced Diamond Sword
+item.reinforcedDiamondHoe.name=Reinforced Diamond Hoe
+#パクセル
+item.ironPaxel.name=Iron Paxel
+item.goldPaxel.name=Gold Paxel
+item.diamondPaxel.name=Diamond Paxel
+#ツールロッド
+item.woodenToolRod.name=Wooden Tool Rod
+item.stoneToolRod.name=Stone Tool Rod
+item.ironToolRod.name=Iron Tool Rod
+item.goldToolRod.name=Gold Tool Rod
+item.diamondToolRod.name=Diamond Tool Rod
+#BattleAxe
+item.ironBattleAxe.name=Iron Battle Axe
+item.goldBattleAxe.name=Gold Battle Axe
+item.diamondBattleAxe.name=Diamond Battle Axe
+#MiningHammer
+item.ironMiningHammer.name=Iron Mining Hammer
+item.goldMiningHammer.name=Gold Mining Hammer
+item.diamondMiningHammer.name=Diamond Mining Hammer
+#Bows
+item.reinforcedtools.shortbow.name=Short Bow
+item.reinforcedtools.compositeBow.name=Composite Bow
+item.reinforcedtools.longbow.name=Long Bow
+#Materials
+tile.slimeBlock.name=Slime Block
+item.suppleStick.name=Supple Stick
+item.compositeStick.name=Composite Stick
+item.highTensionString.name=High Tension String
+item.strongString.name=Strong String
+#その他
+enchantment.level.21=ⅩⅩⅠ
+enchantment.level.20=ⅩⅩ
+enchantment.level.19=ⅩⅨ
+enchantment.level.18=ⅩⅧ
+enchantment.level.17=ⅩⅦ
+enchantment.level.16=ⅩⅥ
+enchantment.level.15=ⅩⅤ
+enchantment.level.14=ⅩⅣ
+enchantment.level.13=ⅩⅢ
+enchantment.level.12=ⅩⅡ
+enchantment.level.11=ⅩⅠ

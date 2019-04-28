@@ -1,0 +1,73 @@
+buildscript {
+    ext.kotlin_version = '1.2.60'
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "CurseForge"
+            url = "https://minecraft.curseforge.com/api/maven/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: "kotlin"
+
+version = "2.0.3-1.11"
+group = "c6h2cl2" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "ReinforcedTools"
+
+tasks.withType(Jar) {
+    compileJava.options.encoding = 'UTF-8'
+    compileJava.options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+}
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+minecraft {
+    version = "1.11.2-13.20.0.2315"
+    runDir = "run"
+    mappings = "snapshot_20170612"
+    makeObfSourceJar = false
+}
+
+repositories {
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile 'yukarilib:YukariLib-1.11:release:dev'
+}
+
+processResources
+        {
+            // this will ensure that this task is redone when the versions change.
+            inputs.property "version", project.version
+            inputs.property "mcversion", project.minecraft.version
+
+            // replace stuff in mcmod.info, nothing else
+            from(sourceSets.main.resources.srcDirs) {
+                include 'mcmod.info'
+
+                // replace version and mcversion
+                expand 'version': project.version, 'mcversion': project.minecraft.version
+            }
+
+            // copy everything else, thats not the mcmod.info
+            from(sourceSets.main.resources.srcDirs) {
+                exclude 'mcmod.info'
+            }
+        }

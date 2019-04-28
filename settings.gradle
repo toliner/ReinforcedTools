@@ -1,0 +1,3 @@
+rootProject.name = 'ReinforcedTools'
+
+include("1.7.10", "1.10.2", "1.11", "1.12", "ver3")

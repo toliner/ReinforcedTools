@@ -1,0 +1,294 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/2.14/userguide/gradle_daemon.html.
+Starting daemon process: workingDir = C:\Users\ma87k\.gradle\daemon\2.14, daemonArgs: [C:\Program Files\Java\jdk1.8.0_92\bin\java.exe, -Xmx3G, -Dfile.encoding=windows-31j, -Duser.country=JP, -Duser.language=ja, -Duser.variant, -cp, C:\Users\ma87k\.gradle\wrapper\dists\gradle-2.14-bin\76oc0mnc3ieqtsukq90mp0rxk\gradle-2.14\lib\gradle-launcher-2.14.jar, org.gradle.launcher.daemon.bootstrap.GradleDaemon, 2.14]
+Starting process 'Gradle build daemon'. Working directory: C:\Users\ma87k\.gradle\daemon\2.14 Command: C:\Program Files\Java\jdk1.8.0_92\bin\java.exe -Xmx3G -Dfile.encoding=windows-31j -Duser.country=JP -Duser.language=ja -Duser.variant -cp C:\Users\ma87k\.gradle\wrapper\dists\gradle-2.14-bin\76oc0mnc3ieqtsukq90mp0rxk\gradle-2.14\lib\gradle-launcher-2.14.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 2.14
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.637 secs.
+Connected to daemon DaemonInfo{pid=16856, address=[68a38a9d-66a8-44f5-b648-349342aaf489 port:57621, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], idle=false, lastBusy=1483118988561, context=DefaultDaemonContext[uid=69c694cc-bcad-42c7-9f40-68ba1a0d18b0,javaHome=C:\Program Files\Java\jdk1.8.0_92,daemonRegistryDir=C:\Users\ma87k\.gradle\daemon,pid=16856,idleTimeout=120000,daemonOpts=-Xmx3G,-Dfile.encoding=windows-31j,-Duser.country=JP,-Duser.language=ja,-Duser.variant]}. Dispatching request BuildAndStop{id=5b88e58f-08f7-469b-9ae1-a6cca2824fbc.1, currentDir=C:\GitHub\ReinforcedTools\1.10.2}.
+Received result org.gradle.launcher.daemon.protocol.BuildStarted@1ae8bcbc from daemon DaemonInfo{pid=16856, address=[68a38a9d-66a8-44f5-b648-349342aaf489 port:57621, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], idle=false, lastBusy=1483118988561, context=DefaultDaemonContext[uid=69c694cc-bcad-42c7-9f40-68ba1a0d18b0,javaHome=C:\Program Files\Java\jdk1.8.0_92,daemonRegistryDir=C:\Users\ma87k\.gradle\daemon,pid=16856,idleTimeout=120000,daemonOpts=-Xmx3G,-Dfile.encoding=windows-31j,-Duser.country=JP,-Duser.language=ja,-Duser.variant]} (build should be starting).
+The client will now receive all logging from the daemon (pid: 16856). The daemon log file: C:\Users\ma87k\.gradle\daemon\2.14\daemon-16856.out.log
+Executing build with daemon context: DefaultDaemonContext[uid=69c694cc-bcad-42c7-9f40-68ba1a0d18b0,javaHome=C:\Program Files\Java\jdk1.8.0_92,daemonRegistryDir=C:\Users\ma87k\.gradle\daemon,pid=16856,idleTimeout=120000,daemonOpts=-Xmx3G,-Dfile.encoding=windows-31j,-Duser.country=JP,-Duser.language=ja,-Duser.variant]
+Starting Build
+Settings evaluated using settings file 'C:\master\settings.gradle'.
+Projects loaded. Root project using build file 'C:\GitHub\ReinforcedTools\1.10.2\build.gradle'.
+Included projects: [root project '1.10.2']
+Evaluating root project '1.10.2' using build file 'C:\GitHub\ReinforcedTools\1.10.2\build.gradle'.
+Compiling build file 'C:\GitHub\ReinforcedTools\1.10.2\build.gradle' using SubsetScriptTransformer.
+Compiling build file 'C:\GitHub\ReinforcedTools\1.10.2\build.gradle' using BuildScriptTransformer.
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-f1643ac        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\api\resources', not found
+Version string '2.0.1 - 1.10.2' does not match SemVer specification 
+You should try SemVer : http://semver.org/
+All projects evaluated.
+Selected primary task 'build' from project :
+Tasks to be executed: [task ':deobfCompileDummyTask', task ':deobfProvidedDummyTask', task ':compileApiKotlin', task ':sourceApiJava', task ':compileApiJava', task ':copyApiKotlinClasses', task ':processApiResources', task ':apiClasses', task ':compileKotlin', task ':sourceMainJava', task ':compileJava', task ':copyMainKotlinClasses', task ':processResources', task ':classes', task ':jar', task ':compileTestKotlin', task ':sourceTestJava', task ':compileTestJava', task ':copyTestKotlinClasses', task ':processTestResources', task ':testClasses', task ':test', task ':extractMcpData', task ':extractMcpMappings', task ':getVersionJson', task ':extractUserdev', task ':genSrgs', task ':reobfJar', task ':assemble', task ':check', task ':build']
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileHashes.bin: MaxSize{1358400}
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\treeSnapshots.bin: MaxSize{67900}
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\treeSnapshotUsage.bin: MaxSize{67900}
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileSnapshotsToTreeSnapshotsIndex.bin: MaxSize{33900}
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileSnapshots.bin: MaxSize{33900}
+Creating In-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\taskArtifacts.bin: MaxSize{6700}
+:deobfCompileDummyTask (Thread[Daemon worker,5,main]) started.
+:deobfCompileDummyTask
+Executing task ':deobfCompileDummyTask' (up-to-date check took 0.0 secs) due to:
+  Task has not declared any outputs.
+:deobfCompileDummyTask (Thread[Daemon worker,5,main]) completed. Took 0.009 secs.
+:deobfProvidedDummyTask (Thread[Daemon worker,5,main]) started.
+:deobfProvidedDummyTask
+Executing task ':deobfProvidedDummyTask' (up-to-date check took 0.0 secs) due to:
+  Task has not declared any outputs.
+:deobfProvidedDummyTask (Thread[Daemon worker,5,main]) completed. Took 0.003 secs.
+:compileApiKotlin (Thread[Daemon worker,5,main]) started.
+:compileApiKotlin
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\api\kotlin', not found
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\api\java', not found
+Skipping task ':compileApiKotlin' as it has no source files.
+:compileApiKotlin UP-TO-DATE
+:compileApiKotlin (Thread[Daemon worker,5,main]) completed. Took 0.002 secs.
+:sourceApiJava (Thread[Daemon worker,5,main]) started.
+:sourceApiJava
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileSnapshotsToTreeSnapshotsIndex.bin
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileHashes.bin
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\treeSnapshots.bin
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\treeSnapshotUsage.bin
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\fileSnapshots.bin
+Invalidating in-memory cache of C:\GitHub\ReinforcedTools\1.10.2\.gradle\2.14\taskArtifacts\taskArtifacts.bin
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\api\java', not found
+Skipping task ':sourceApiJava' as it is up-to-date (took 0.018 secs).
+:sourceApiJava UP-TO-DATE
+:sourceApiJava (Thread[Daemon worker,5,main]) completed. Took 0.02 secs.
+:compileApiJava (Thread[Daemon worker,5,main]) started.
+:compileApiJava
+Skipping task ':compileApiJava' as it has no source files.
+:compileApiJava UP-TO-DATE
+:compileApiJava (Thread[Daemon worker,5,main]) completed. Took 0.001 secs.
+:copyApiKotlinClasses (Thread[Daemon worker,5,main]) started.
+:copyApiKotlinClasses
+Skipping task ':copyApiKotlinClasses' as it is up-to-date (took 0.001 secs).
+:copyApiKotlinClasses UP-TO-DATE
+:copyApiKotlinClasses (Thread[Daemon worker,5,main]) completed. Took 0.003 secs.
+:processApiResources (Thread[Daemon worker,5,main]) started.
+:processApiResources
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\api\resources', not found
+Skipping task ':processApiResources' as it has no source files.
+:processApiResources UP-TO-DATE
+:processApiResources (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:apiClasses (Thread[Daemon worker,5,main]) started.
+:apiClasses
+Skipping task ':apiClasses' as it has no actions.
+:apiClasses UP-TO-DATE
+:apiClasses (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:compileKotlin (Thread[Daemon worker,5,main]) started.
+:compileKotlin
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\main\kotlin', not found
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-gradle-plugin/1.1-M04/kotlin-gradle-plugin-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-stdlib/1.1-M04/kotlin-stdlib-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-android-extensions/1.1-M04/kotlin-android-extensions-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.1-M04/kotlin-gradle-plugin-api-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.1-M04/kotlin-compiler-embeddable-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-compiler-runner/1.1-M04/kotlin-compiler-runner-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-annotation-processing/1.1-M04/kotlin-annotation-processing-1.1-M04.pom]
+Failed to get resource: HEAD. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/org/jetbrains/kotlin/kotlin-runtime/1.1-M04/kotlin-runtime-1.1-M04.pom]
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/net/minecraftforge/forgeSrc/1.10.2-12.18.3.2185/forgeSrc-1.10.2-12.18.3.2185.pom]
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\main\kotlin', not found
+Executing task ':compileKotlin' (up-to-date check took 9.711 secs) due to:
+  Input file C:\Users\ma87k\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-api\1.1-M04\eda6d7270919d8eb356a34a2ce377da040870d11\kotlin-gradle-plugin-api-1.1-M04.jar has been added.
+  Input file C:\Users\ma87k\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin\1.1-M04\6d80b14b397cb93d02ce3c813f219deee2895b85\kotlin-gradle-plugin-1.1-M04.jar has been added.
+  Input file C:\Users\ma87k\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar has changed.
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\main\kotlin', not found
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\main\kotlin', not found
+Connected to daemon
+w: The '-d' option with a directory destination is ignored because '-module' is specified
+w: C:\GitHub\ReinforcedTools\1.10.2\src\main\java\c6h2cl2\ReinforcedTools\ReinforcedToolsRegistry.kt: (101, 14): Parameter 'event' is never used
+w: C:\GitHub\ReinforcedTools\1.10.2\src\main\java\c6h2cl2\ReinforcedTools\event\FOVEvent.kt: (16, 19): Parameter 'event' is never used
+Connected to daemon
+:compileKotlin (Thread[Daemon worker,5,main]) completed. Took 11.434 secs.
+:sourceMainJava (Thread[Daemon worker,5,main]) started.
+:sourceMainJava
+Skipping task ':sourceMainJava' as it is up-to-date (took 0.003 secs).
+:sourceMainJava UP-TO-DATE
+:sourceMainJava (Thread[Daemon worker,5,main]) completed. Took 0.004 secs.
+:compileJava (Thread[Daemon worker,5,main]) started.
+:compileJava
+Skipping task ':compileJava' as it has no source files.
+:compileJava UP-TO-DATE
+:compileJava (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:copyMainKotlinClasses (Thread[Daemon worker,5,main]) started.
+:copyMainKotlinClasses
+Executing task ':copyMainKotlinClasses' (up-to-date check took 0.004 secs) due to:
+  Input file C:\GitHub\ReinforcedTools\1.10.2\build\kotlin-classes\main\c6h2cl2\ReinforcedTools\EnumToolType.class has changed.
+  Input file C:\GitHub\ReinforcedTools\1.10.2\build\kotlin-classes\main\c6h2cl2\ReinforcedTools\Item\WeaponSword.class has changed.
+  Input file C:\GitHub\ReinforcedTools\1.10.2\build\kotlin-classes\main\c6h2cl2\ReinforcedTools\EnumToolType$WhenMappings.class has changed.
+:copyMainKotlinClasses (Thread[Daemon worker,5,main]) completed. Took 0.053 secs.
+:processResources (Thread[Daemon worker,5,main]) started.
+:processResources
+Executing task ':processResources' (up-to-date check took 0.021 secs) due to:
+  Value of input property 'version' has changed for task ':processResources'
+:processResources (Thread[Daemon worker,5,main]) completed. Took 0.433 secs.
+:classes (Thread[Daemon worker,5,main]) started.
+:classes
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:jar (Thread[Daemon worker,5,main]) started.
+:jar
+Executing task ':jar' (up-to-date check took 0.002 secs) due to:
+  No history is available.
+:jar (Thread[Daemon worker,5,main]) completed. Took 0.061 secs.
+:compileTestKotlin (Thread[Daemon worker,5,main]) started.
+:compileTestKotlin
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\test\kotlin', not found
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\test\java', not found
+Skipping task ':compileTestKotlin' as it has no source files.
+:compileTestKotlin UP-TO-DATE
+:compileTestKotlin (Thread[Daemon worker,5,main]) completed. Took 0.001 secs.
+:sourceTestJava (Thread[Daemon worker,5,main]) started.
+:sourceTestJava
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\test\java', not found
+Executing task ':sourceTestJava' (up-to-date check took 0.001 secs) due to:
+  No history is available.
+:sourceTestJava (Thread[Daemon worker,5,main]) completed. Took 0.004 secs.
+:compileTestJava (Thread[Daemon worker,5,main]) started.
+:compileTestJava
+Skipping task ':compileTestJava' as it has no source files.
+:compileTestJava UP-TO-DATE
+:compileTestJava (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:copyTestKotlinClasses (Thread[Daemon worker,5,main]) started.
+:copyTestKotlinClasses
+Executing task ':copyTestKotlinClasses' (up-to-date check took 0.001 secs) due to:
+  No history is available.
+All input files are considered out-of-date for incremental task ':copyTestKotlinClasses'.
+:copyTestKotlinClasses (Thread[Daemon worker,5,main]) completed. Took 0.006 secs.
+:processTestResources (Thread[Daemon worker,5,main]) started.
+:processTestResources
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\src\test\resources', not found
+Skipping task ':processTestResources' as it has no source files.
+:processTestResources UP-TO-DATE
+:processTestResources (Thread[Daemon worker,5,main]) completed. Took 0.001 secs.
+:testClasses (Thread[Daemon worker,5,main]) started.
+:testClasses
+Skipping task ':testClasses' as it has no actions.
+:testClasses UP-TO-DATE
+:testClasses (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:test (Thread[Daemon worker,5,main]) started.
+:test
+file or directory 'C:\GitHub\ReinforcedTools\1.10.2\build\classes\test', not found
+Skipping task ':test' as it has no source files.
+:test UP-TO-DATE
+:test (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:extractMcpData (Thread[Daemon worker,5,main]) started.
+:extractMcpData
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/de/oceanlabs/mcp/mcp/1.10.2/mcp-1.10.2.pom]
+Skipping task ':extractMcpData' as task onlyIf is false.
+:extractMcpData SKIPPED
+:extractMcpData (Thread[Daemon worker,5,main]) completed. Took 1.426 secs.
+:extractMcpMappings (Thread[Daemon worker,5,main]) started.
+:extractMcpMappings
+Failed to get resource: GET. [HTTP HTTP/1.1 403 Forbidden: https://libraries.minecraft.net/de/oceanlabs/mcp/mcp_snapshot/20161111-1.10.2/mcp_snapshot-20161111-1.10.2.pom]
+ Corrupted Cache!
+Checksums found: e1b968da4441e196e5308d9a6c7fb95f
+45c71a070b13b51bb43554069c41b9a4
+9bab28b07e023011404cb97e9779f716
+7f4ac653df6292c587fea820b16967a4
+ce5b3c84699305b503127b9235384350
+c5a1f6802bff3fcc47f5fe98c5aa37d1
+298c4600f764e771a000abf533466d15
+a825f195913c74ede5e5121f6938334c
+b01c70a9f70287382dc8dc0c14dcd775
+63373367284fe2570ac059d743c853f2
+55051cba54e893e9e4fc78002620b74e
+b11ee1a9af5a59adca650f672ced29b4
+9a900f7b62d269be31501fdc73246f9f
+d496016716e5de43a96c61bd5fff7a9d
+836bbc00c69569742455258adc1b64ff
+8ff68ae982256bc74f3a315df0bf0be6
+08e014d835f22532aeaed8e52d25de6c
+05f5ad109deba63f5d4bb6861a4abef2
+35ebdba408d64f5cbc345b589547f183
+b326b5062b2f0e69046810717534cb09
+68934a3e9455fa72420237eb05902327
+f59135f04bb1d8023baa2ba75d36add0
+Checksums calculated: e1b968da4441e196e5308d9a6c7fb95f
+45c71a070b13b51bb43554069c41b9a4
+9bab28b07e023011404cb97e9779f716
+7f4ac653df6292c587fea820b16967a4
+ce5b3c84699305b503127b9235384350
+c5a1f6802bff3fcc47f5fe98c5aa37d1
+298c4600f764e771a000abf533466d15
+a825f195913c74ede5e5121f6938334c
+b01c70a9f70287382dc8dc0c14dcd775
+63373367284fe2570ac059d743c853f2
+55051cba54e893e9e4fc78002620b74e
+b11ee1a9af5a59adca650f672ced29b4
+9a900f7b62d269be31501fdc73246f9f
+d496016716e5de43a96c61bd5fff7a9d
+cc1a434ec8c7fd0891d8e1fe24d3a4e3
+77003df9320a6a9fcb650772b6078023
+68507df0c90ed7ae547b89fb65e546a2
+7898051bf3c528b3d2a001f4ee57a17d
+99e379cced2ef93023c122b2d873fd70
+fefaa0bee3ab857aa5d100f9b9d30ff4
+8b7f02c6fa44adab015466022ecbca7e
+b52e7ee52483f2709da3c3f14eb49135
+105024b96eb02f548eb3bbc66dffa86d
+909823287a5df774b5b8ac37322a7b83
+0ea203cb1ea0c6d27fde42fe23ef90f8
+ccfc5939ea951146db43cb82504f2c67
+2f4bf6455ba9cb00aa392bc6fa1d0d77
+ebe61dab1efed4169f09ff7981c8f83e
+836bbc00c69569742455258adc1b64ff
+8ff68ae982256bc74f3a315df0bf0be6
+08e014d835f22532aeaed8e52d25de6c
+05f5ad109deba63f5d4bb6861a4abef2
+35ebdba408d64f5cbc345b589547f183
+b326b5062b2f0e69046810717534cb09
+68934a3e9455fa72420237eb05902327
+f59135f04bb1d8023baa2ba75d36add0
+Executing task ':extractMcpMappings' (up-to-date check took 0.074 secs) due to:
+  Output file C:\Users\ma87k\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20161111\.cache has been removed.
+:extractMcpMappings (Thread[Daemon worker,5,main]) completed. Took 1.714 secs.
+:getVersionJson (Thread[Daemon worker,5,main]) started.
+:getVersionJson
+Executing task ':getVersionJson' (up-to-date check took 0.002 secs) due to:
+  Task.upToDateWhen is false.
+:getVersionJson (Thread[Daemon worker,5,main]) completed. Took 0.316 secs.
+:extractUserdev (Thread[Daemon worker,5,main]) started.
+:extractUserdev
+Skipping task ':extractUserdev' as it is up-to-date (took 0.012 secs).
+:extractUserdev UP-TO-DATE
+:extractUserdev (Thread[Daemon worker,5,main]) completed. Took 0.013 secs.
+:genSrgs (Thread[Daemon worker,5,main]) started.
+:genSrgs
+Skipping task ':genSrgs' as task onlyIf is false.
+:genSrgs SKIPPED
+:genSrgs (Thread[Daemon worker,5,main]) completed. Took 0.276 secs.
+:reobfJar (Thread[Daemon worker,5,main]) started.
+:reobfJar
+Executing task ':reobfJar' (up-to-date check took 0.0 secs) due to:
+  Task.upToDateWhen is false.
+:reobfJar (Thread[Daemon worker,5,main]) completed. Took 0.297 secs.
+:assemble (Thread[Daemon worker,5,main]) started.
+:assemble
+Skipping task ':assemble' as it has no actions.
+:assemble (Thread[Daemon worker,5,main]) completed. Took 0.001 secs.
+:check (Thread[Daemon worker,5,main]) started.
+:check
+Skipping task ':check' as it has no actions.
+:check UP-TO-DATE
+:check (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+:build (Thread[Daemon worker,5,main]) started.
+:build
+Skipping task ':build' as it has no actions.
+:build (Thread[Daemon worker,5,main]) completed. Took 0.0 secs.
+
+BUILD SUCCESSFUL
+
+Total time: 23.433 secs
+Stopped 0 compiler daemon(s).
+Received result Success[value=null] from daemon DaemonInfo{pid=16856, address=[68a38a9d-66a8-44f5-b648-349342aaf489 port:57621, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], idle=false, lastBusy=1483118988561, context=DefaultDaemonContext[uid=69c694cc-bcad-42c7-9f40-68ba1a0d18b0,javaHome=C:\Program Files\Java\jdk1.8.0_92,daemonRegistryDir=C:\Users\ma87k\.gradle\daemon,pid=16856,idleTimeout=120000,daemonOpts=-Xmx3G,-Dfile.encoding=windows-31j,-Duser.country=JP,-Duser.language=ja,-Duser.variant]} (build should be done).
