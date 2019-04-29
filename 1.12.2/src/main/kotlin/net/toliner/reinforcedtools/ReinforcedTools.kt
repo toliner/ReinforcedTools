@@ -1,5 +1,8 @@
 package net.toliner.reinforcedtools
 
+import net.minecraft.creativetab.CreativeTabs
+import net.minecraft.item.Item
+import net.minecraft.item.ItemStack
 import net.minecraftforge.fml.common.*
 import net.minecraftforge.fml.common.event.FMLConstructionEvent
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -9,6 +12,10 @@ import net.minecraftforge.fml.relauncher.Side
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_ID
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_NAME
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_VERSION
+import net.toliner.reinforcedtools.item.ItemReinforcedAxe
+import net.toliner.reinforcedtools.item.ItemReinforcedHoe
+import net.toliner.reinforcedtools.item.ItemReinforcedPickaxe
+import net.toliner.reinforcedtools.item.ItemReinforcedShovel
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 
@@ -54,6 +61,17 @@ object ReinforcedTools {
     @Mod.EventHandler
     fun postInit(event: FMLPostInitializationEvent) {
         PROXY.postInit()
+    }
+
+    val tabReinforcedTools = object : CreativeTabs(MOD_NAME) {
+        override fun getTabIconItem(): ItemStack = ItemStack.EMPTY
+    }
+
+    object Items {
+        val reinforcedAxe = Item.ToolMaterial.values().map { ItemReinforcedAxe(it) }
+        val reinforcedHoe = Item.ToolMaterial.values().map { ItemReinforcedHoe(it) }
+        val reinforcedPickaxe = Item.ToolMaterial.values().map { ItemReinforcedPickaxe(it) }
+        val reinforcedShovel = Item.ToolMaterial.values().map { ItemReinforcedShovel(it) }
     }
 }
 

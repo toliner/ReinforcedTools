@@ -1,0 +1,35 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "reinforcedtools:item_handheld",
+    "transform": "forge:default-item",
+    "uvlock": true
+  },
+  "variants": {
+    "wooden": [{
+      "textures": {
+        "texture": "reinforcedtools:items/shovel/reinforcedwoodenshovel"
+      }
+    }],
+    "stone": [{
+      "textures": {
+        "texture": "reinforcedtools:items/shovel/reinforcedstoneshovel"
+      }
+    }],
+    "iron": [{
+      "textures": {
+        "texture": "reinforcedtools:items/shovel/reinforcedironshovel"
+      }
+    }],
+    "gold": [{
+      "textures": {
+        "texture": "reinforcedtools:items/shovel/reinforcedgoldshovel"
+      }
+    }],
+    "diamond": [{
+      "textures": {
+        "texture": "reinforcedtools:items/shovel/reinforceddiamondshovel"
+      }
+    }]
+  }
+}

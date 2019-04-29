@@ -1,0 +1,35 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "reinforcedtools:item_handheld",
+    "transform": "forge:default-item",
+    "uvlock": true
+  },
+  "variants": {
+    "wooden": [{
+      "textures": {
+        "texture": "reinforcedtools:items/hoe/reinforcedwoodenhoe"
+      }
+    }],
+    "stone": [{
+      "textures": {
+        "texture": "reinforcedtools:items/hoe/reinforcedstonehoe"
+      }
+    }],
+    "iron": [{
+      "textures": {
+        "texture": "reinforcedtools:items/hoe/reinforcedironhoe"
+      }
+    }],
+    "gold": [{
+      "textures": {
+        "texture": "reinforcedtools:items/hoe/reinforcedgoldhoe"
+      }
+    }],
+    "diamond": [{
+      "textures": {
+        "texture": "reinforcedtools:items/hoe/reinforceddiamondhoe"
+      }
+    }]
+  }
+}

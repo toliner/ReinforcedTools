@@ -1,0 +1,35 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "reinforcedtools:item_handheld",
+    "transform": "forge:default-item",
+    "uvlock": true
+  },
+  "variants": {
+    "wooden": [{
+      "textures": {
+        "texture": "reinforcedtools:items/axe/reinforcedwoodenaxe"
+      }
+    }],
+    "stone": [{
+      "textures": {
+        "texture": "reinforcedtools:items/axe/reinforcedstoneaxe"
+      }
+    }],
+    "iron": [{
+      "textures": {
+        "texture": "reinforcedtools:items/axe/reinforcedironaxe"
+      }
+    }],
+    "gold": [{
+      "textures": {
+        "texture": "reinforcedtools:items/axe/reinforcedgoldaxe"
+      }
+    }],
+    "diamond": [{
+      "textures": {
+        "texture": "reinforcedtools:items/axe/reinforceddiamondaxe"
+      }
+    }]
+  }
+}

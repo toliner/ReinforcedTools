@@ -1,0 +1,35 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "reinforcedtools:item_handheld",
+    "transform": "forge:default-item",
+    "uvlock": true
+  },
+  "variants": {
+    "wooden": [{
+      "textures": {
+        "texture": "reinforcedtools:items/pickaxe/reinforcedwoodenpickaxe"
+      }
+    }],
+    "stone": [{
+      "textures": {
+        "texture": "reinforcedtools:items/pickaxe/reinforcedstonepickaxe"
+      }
+    }],
+    "iron": [{
+      "textures": {
+        "texture": "reinforcedtools:items/pickaxe/reinforcedironpickaxe"
+      }
+    }],
+    "gold": [{
+      "textures": {
+        "texture": "reinforcedtools:items/pickaxe/reinforcedgoldpickaxe"
+      }
+    }],
+    "diamond": [{
+      "textures": {
+        "texture": "reinforcedtools:items/pickaxe/reinforceddiamondpickaxe"
+      }
+    }]
+  }
+}
