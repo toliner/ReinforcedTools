@@ -9,6 +9,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import net.minecraftforge.fml.relauncher.Side
+import net.toliner.korgelin.Korgelin
+import net.toliner.reinforcedtools.ReinforcedTools.DEPENDENCIES
+import net.toliner.reinforcedtools.ReinforcedTools.KOTLIN_ADAPTER
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_ID
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_NAME
 import net.toliner.reinforcedtools.ReinforcedTools.MOD_VERSION
@@ -23,12 +26,15 @@ import java.lang.reflect.Method
  * @author kojin15.
  */
 @Mod(modid = MOD_ID, name = MOD_NAME, version = MOD_VERSION, acceptedMinecraftVersions = "[1.12.2]",
-        modLanguage = "kotlin", modLanguageAdapter = "net.toliner.reinforcedtools.KotlinAdapter",
+        modLanguage = "kotlin", modLanguageAdapter = KOTLIN_ADAPTER, dependencies = DEPENDENCIES,
         useMetadata = true)
 object ReinforcedTools {
     const val MOD_ID = "reinforcedtools"
     const val MOD_NAME = "ReinforcedTools"
     const val MOD_VERSION = "3.0.0"
+
+    const val KOTLIN_ADAPTER = "net.toliner.korgelin.KotlinAdapter"
+    const val DEPENDENCIES = "required-after:${Korgelin.MOD_ID};"
 
     @Mod.Metadata
     private lateinit var METADATA: ModMetadata
