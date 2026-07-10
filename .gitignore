@@ -9,5 +9,6 @@ runs/
 .vscode/
 out/
 *.log
+logs/
 src/generated/resources/
 .mise.local.toml

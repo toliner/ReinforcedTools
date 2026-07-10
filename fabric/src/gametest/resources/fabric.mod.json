@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "reinforced_tools_gametest",
+  "version": "1.0.0",
+  "name": "Reinforced Tools Game Tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": [
+      "dev.toliner.reinforcedtools.fabric.gametest.ReinforcedToolsGameTests"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "reinforced_tools": "*"
+  }
+}

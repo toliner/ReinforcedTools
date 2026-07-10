@@ -30,3 +30,11 @@ loom {
         }
     }
 }
+
+fabricApi {
+    configureTests {
+        createSourceSet.set(true)
+        modId.set("${providers.gradleProperty("mod_id").get()}_gametest")
+        enableClientGameTests.set(false)
+    }
+}

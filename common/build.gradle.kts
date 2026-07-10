@@ -35,8 +35,20 @@ sourceSets {
     }
 }
 
+val generatedResourcesDirectory = layout.buildDirectory.dir("generated-resources")
+val generateReinforcedToolsData = tasks.register<JavaExec>("generateReinforcedToolsData") {
+    group = "data generation"
+    description = "Generates Reinforced Tools recipes, models, tags, and translations."
+    dependsOn(tasks.named("classes"))
+    classpath = sourceSets.getByName("main").runtimeClasspath
+    mainClass.set("dev.toliner.reinforcedtools.ReinforcedToolsDataGenerator")
+    args(generatedResourcesDirectory.get().asFile.absolutePath)
+}
+
 artifacts {
     add("commonJava", sourceSets.getByName("main").java.sourceDirectories.singleFile)
     add("commonResources", sourceSets.getByName("main").resources.sourceDirectories.singleFile)
-    add("commonGeneratedResources", sourceSets.getByName("generated").resources.sourceDirectories.singleFile)
+    add("commonGeneratedResources", generatedResourcesDirectory) {
+        builtBy(generateReinforcedToolsData)
+    }
 }

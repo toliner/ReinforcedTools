@@ -19,6 +19,14 @@ neoForge {
         create("server") {
             server()
         }
+        create("gameTestServer") {
+            server()
+            mainClass.set("net.neoforged.fml.startup.GameTestServer")
+            gameDirectory.set(layout.buildDirectory.dir("gametest-server"))
+            systemProperty("neoforge.enableGameTest", "true")
+            programArgument("--tests")
+            programArgument("$modId:*")
+        }
     }
 
     mods {
