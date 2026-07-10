@@ -1,0 +1,13 @@
+.gradle/
+build/
+*/build/
+run/
+*/run/
+runs/
+*.iml
+.idea/
+.vscode/
+out/
+*.log
+src/generated/resources/
+.mise.local.toml

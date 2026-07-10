@@ -1,0 +1,47 @@
+plugins {
+    id 'multiloader-loader'
+    alias libs.plugins.modDevGradle
+}
+
+neoForge {
+    version = libs.neoForge.get().version
+
+    runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
+        }
+        client { client() }
+        server { server() }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+apply from: rootProject.file('repositories.gradle')
+
+dependencies {
+    implementation(libs.balmNeoForge) {
+        changing = libs.versions.balm.get().contains('SNAPSHOT')
+    }
+}
+
+def neoForgeSnapshotUrl = findProperty('neoforge_snapshot_url')
+if (neoForgeSnapshotUrl != null && !neoForgeSnapshotUrl.isBlank()) {
+    repositories {
+        maven {
+            name = 'NeoForge Snapshots'
+            url = uri(neoForgeSnapshotUrl)
+            content {
+                includeModule('net.neoforged', 'neoforge')
+                includeModule('net.neoforged', 'testframework')
+            }
+        }
+    }
+}
