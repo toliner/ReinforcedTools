@@ -13,6 +13,8 @@ import net.minecraft.nbt.NbtUtils;
 import net.minecraft.resources.Identifier;
 
 import com.google.common.hash.Hashing;
+import org.jspecify.annotations.NonNull;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -27,7 +29,7 @@ public final class ReinforcedToolsDataGenerator {
     private ReinforcedToolsDataGenerator() {
     }
 
-    public static void main(String[] args) throws IOException {
+    static void main(String[] args) throws IOException {
         if (args.length != 1) {
             throw new IllegalArgumentException("Expected one output directory argument");
         }
@@ -65,7 +67,7 @@ public final class ReinforcedToolsDataGenerator {
         }
 
         @Override
-        public CompletableFuture<?> run(CachedOutput cache) {
+        public @NonNull CompletableFuture<?> run(CachedOutput cache) {
             var jsonWrites = files.entrySet().stream()
                 .map(entry -> DataProvider.saveStable(cache, entry.getValue(), entry.getKey()))
                 .toArray(CompletableFuture[]::new);
@@ -79,7 +81,7 @@ public final class ReinforcedToolsDataGenerator {
         }
 
         @Override
-        public String getName() {
+        public @NonNull String getName() {
             return "ReinforcedTools resources";
         }
 
