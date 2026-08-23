@@ -8,23 +8,24 @@ import net.minecraft.world.item.ToolMaterial;
 
 /** The material-specific stats used by reinforced tools. */
 public enum ReinforcedToolMaterial {
-    WOOD("wood", "Wood", "wooden", 140, 3.0F, 0.0F, 18, BlockTags.INCORRECT_FOR_WOODEN_TOOL, ItemTags.WOODEN_TOOL_MATERIALS,
+    WOOD("wood", "Wood", "木", "wooden", 140, 3.0F, 0.0F, 18, BlockTags.INCORRECT_FOR_WOODEN_TOOL, ItemTags.WOODEN_TOOL_MATERIALS,
         "oak_planks", 6.0F, -3.2F, 0.0F, -3.0F),
-    STONE("stone", "Stone", "stone", 240, 4.5F, 1.0F, 8, BlockTags.INCORRECT_FOR_STONE_TOOL, ItemTags.STONE_TOOL_MATERIALS,
+    STONE("stone", "Stone", "石", "stone", 240, 4.5F, 1.0F, 8, BlockTags.INCORRECT_FOR_STONE_TOOL, ItemTags.STONE_TOOL_MATERIALS,
         "cobblestone", 7.0F, -3.2F, -1.0F, -2.0F),
-    COPPER("copper", "Copper", "copper", 320, 5.5F, 1.0F, 15, BlockTags.INCORRECT_FOR_COPPER_TOOL, ItemTags.COPPER_TOOL_MATERIALS,
+    COPPER("copper", "Copper", "銅", "copper", 320, 5.5F, 1.0F, 15, BlockTags.INCORRECT_FOR_COPPER_TOOL, ItemTags.COPPER_TOOL_MATERIALS,
         "copper_ingot", 7.0F, -3.2F, -1.0F, -2.0F),
-    IRON("iron", "Iron", "iron", 700, 7.0F, 2.0F, 16, BlockTags.INCORRECT_FOR_IRON_TOOL, ItemTags.IRON_TOOL_MATERIALS,
+    IRON("iron", "Iron", "鉄", "iron", 700, 7.0F, 2.0F, 16, BlockTags.INCORRECT_FOR_IRON_TOOL, ItemTags.IRON_TOOL_MATERIALS,
         "iron_ingot", 6.0F, -3.1F, -2.0F, -1.0F),
-    GOLD("gold", "Gold", "golden", 100, 14.0F, 0.0F, 25, BlockTags.INCORRECT_FOR_GOLD_TOOL, ItemTags.GOLD_TOOL_MATERIALS,
+    GOLD("gold", "Gold", "金", "golden", 100, 14.0F, 0.0F, 25, BlockTags.INCORRECT_FOR_GOLD_TOOL, ItemTags.GOLD_TOOL_MATERIALS,
             "gold_ingot", 6.0F, -3.0F, 0.0F, -3.0F),
-    DIAMOND("diamond", "Diamond", "diamond", 2500, 9.0F, 3.0F, 13, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, ItemTags.DIAMOND_TOOL_MATERIALS,
+    DIAMOND("diamond", "Diamond", "ダイヤモンド", "diamond", 2500, 9.0F, 3.0F, 13, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, ItemTags.DIAMOND_TOOL_MATERIALS,
         "diamond", 5.0F, -3.0F, -3.0F, 0.0F),
-    NETHERITE("netherite", "Netherite", "netherite", 4000, 10.0F, 5.0F, 18, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, ItemTags.NETHERITE_TOOL_MATERIALS,
+    NETHERITE("netherite", "Netherite", "ネザライト", "netherite", 4000, 10.0F, 5.0F, 18, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, ItemTags.NETHERITE_TOOL_MATERIALS,
         "netherite_ingot", 5.0F, -3.0F, -4.0F, 0.0F);
 
     private final String id;
     private final String displayName;
+    private final String japaneseDisplayName;
     private final String vanillaPrefix;
     private final int durability;
     private final float speed;
@@ -41,6 +42,7 @@ public enum ReinforcedToolMaterial {
     ReinforcedToolMaterial(
         String id,
         String displayName,
+        String japaneseDisplayName,
         String vanillaPrefix,
         int durability,
         float speed,
@@ -56,6 +58,7 @@ public enum ReinforcedToolMaterial {
     ) {
         this.id = id;
         this.displayName = displayName;
+        this.japaneseDisplayName = japaneseDisplayName;
         this.vanillaPrefix = vanillaPrefix;
         this.durability = durability;
         this.speed = speed;
@@ -83,6 +86,10 @@ public enum ReinforcedToolMaterial {
 
     public String displayName() {
         return displayName;
+    }
+
+    public String japaneseDisplayName() {
+        return japaneseDisplayName;
     }
 
     public String vanillaPrefix() {

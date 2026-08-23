@@ -43,6 +43,7 @@ public final class ReinforcedToolsDataGenerator {
     private static final class ReinforcedToolsDataProvider implements DataProvider {
         private final PackOutput.PathProvider recipePath;
         private final PackOutput.PathProvider modelPath;
+        private final PackOutput.PathProvider itemDefinitionPath;
         private final PackOutput.PathProvider tagPath;
         private final PackOutput.PathProvider langPath;
         private final Path gameTestStructurePath;
@@ -51,6 +52,7 @@ public final class ReinforcedToolsDataGenerator {
         private ReinforcedToolsDataProvider(PackOutput output) {
             recipePath = output.createPathProvider(PackOutput.Target.DATA_PACK, "recipe");
             modelPath = output.createPathProvider(PackOutput.Target.RESOURCE_PACK, "models/item");
+            itemDefinitionPath = output.createPathProvider(PackOutput.Target.RESOURCE_PACK, "items");
             tagPath = output.createPathProvider(PackOutput.Target.DATA_PACK, "tags/item");
             langPath = output.createPathProvider(PackOutput.Target.RESOURCE_PACK, "lang");
             gameTestStructurePath = output.getOutputFolder(PackOutput.Target.DATA_PACK)
@@ -180,9 +182,17 @@ public final class ReinforcedToolsDataGenerator {
             for (var material : ReinforcedToolMaterial.values()) {
                 for (var type : ReinforcedToolType.values()) {
                     String itemId = ReinforcedTools.toolId(material, type);
-                    addModel(itemId, "minecraft:item/" + material.vanillaPrefix() + "_" + type.id());
+                    addModel(
+                        itemId,
+                        "minecraft:item/handheld",
+                        "minecraft:item/" + material.vanillaPrefix() + "_" + type.id()
+                    );
                 }
-                addModel(ReinforcedTools.repairKitId(material), "minecraft:item/" + material.modelItem());
+                addModel(
+                    ReinforcedTools.repairKitId(material),
+                    "minecraft:item/generated",
+                    "minecraft:item/" + material.modelItem()
+                );
             }
         }
 
@@ -206,14 +216,14 @@ public final class ReinforcedToolsDataGenerator {
                 for (var type : ReinforcedToolType.values()) {
                     String itemId = ReinforcedTools.toolId(material, type);
                     String name = japanese
-                        ? "強化" + material.displayName() + type.displayName()
+                        ? "強化" + material.japaneseDisplayName() + "の" + type.japaneseDisplayName()
                         : "Reinforced " + material.displayName() + " " + type.displayName();
                     lang.addProperty("item." + ReinforcedTools.MOD_ID + "." + itemId, name);
                 }
                 String kitId = ReinforcedTools.repairKitId(material);
                 lang.addProperty(
                     "item." + ReinforcedTools.MOD_ID + "." + kitId,
-                    japanese ? "強化" + material.displayName() + "修理キット" : "Reinforced " + material.displayName() + " Repair Kit"
+                    japanese ? "強化" + material.japaneseDisplayName() + "の修理キット" : "Reinforced " + material.displayName() + " Repair Kit"
                 );
             }
             files.put(langPath.json(Identifier.fromNamespaceAndPath(ReinforcedTools.MOD_ID, language)), lang);
@@ -277,10 +287,20 @@ public final class ReinforcedToolsDataGenerator {
             files.put(recipePath.json(modIdentifier(name)), recipe);
         }
 
-        private void addModel(String itemId, String parent) {
+        private void addModel(String itemId, String parent, String texture) {
             JsonObject model = new JsonObject();
             model.addProperty("parent", parent);
+            JsonObject textures = new JsonObject();
+            textures.addProperty("layer0", texture);
+            model.add("textures", textures);
             files.put(modelPath.json(modIdentifier(itemId)), model);
+
+            JsonObject itemDefinition = new JsonObject();
+            JsonObject itemModel = new JsonObject();
+            itemModel.addProperty("type", "minecraft:model");
+            itemModel.addProperty("model", modId("item/" + itemId));
+            itemDefinition.add("model", itemModel);
+            files.put(itemDefinitionPath.json(modIdentifier(itemId)), itemDefinition);
         }
 
         private static JsonObject result(String id, int count) {
