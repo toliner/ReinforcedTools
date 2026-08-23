@@ -61,3 +61,38 @@ if (!neoForgeSnapshotUrl.isNullOrBlank()) {
         }
     }
 }
+
+val javaToolchains = project.extensions.getByType<JavaToolchainService>()
+val java25Launcher = javaToolchains.launcherFor {
+    languageVersion.set(JavaLanguageVersion.of(25))
+}
+
+tasks.configureEach {
+    if (this.hasProperty("javaExecutable")) {
+        try {
+            val prop = this.property("javaExecutable")
+            if (prop is RegularFileProperty) {
+                prop.set(java25Launcher.map { it.executablePath })
+            } else if (prop is Property<*>) {
+                try {
+                    @Suppress("UNCHECKED_CAST")
+                    (prop as Property<String>).set(java25Launcher.map { it.executablePath.asFile.absolutePath })
+                } catch (_: Exception) {
+                    @Suppress("UNCHECKED_CAST")
+                    (prop as Property<RegularFile>).set(java25Launcher.map { it.executablePath })
+                }
+            }
+        } catch (_: Exception) {
+        }
+    }
+    if (this.hasProperty("javaLauncher")) {
+        try {
+            val prop = this.property("javaLauncher")
+            if (prop is Property<*>) {
+                @Suppress("UNCHECKED_CAST")
+                (prop as Property<JavaLauncher>).set(java25Launcher)
+            }
+        } catch (_: Exception) {
+        }
+    }
+}
