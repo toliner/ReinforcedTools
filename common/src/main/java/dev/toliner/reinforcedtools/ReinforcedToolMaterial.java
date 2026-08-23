@@ -16,12 +16,12 @@ public enum ReinforcedToolMaterial {
         "copper_ingot", 7.0F, -3.2F, -1.0F, -2.0F),
     IRON("iron", "Iron", "iron", 700, 7.0F, 2.0F, 16, BlockTags.INCORRECT_FOR_IRON_TOOL, ItemTags.IRON_TOOL_MATERIALS,
         "iron_ingot", 6.0F, -3.1F, -2.0F, -1.0F),
+    GOLD("gold", "Gold", "golden", 100, 14.0F, 0.0F, 25, BlockTags.INCORRECT_FOR_GOLD_TOOL, ItemTags.GOLD_TOOL_MATERIALS,
+            "gold_ingot", 6.0F, -3.0F, 0.0F, -3.0F),
     DIAMOND("diamond", "Diamond", "diamond", 2500, 9.0F, 3.0F, 13, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, ItemTags.DIAMOND_TOOL_MATERIALS,
         "diamond", 5.0F, -3.0F, -3.0F, 0.0F),
     NETHERITE("netherite", "Netherite", "netherite", 4000, 10.0F, 5.0F, 18, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, ItemTags.NETHERITE_TOOL_MATERIALS,
-        "netherite_ingot", 5.0F, -3.0F, -4.0F, 0.0F),
-    GOLD("gold", "Gold", "golden", 100, 14.0F, 0.0F, 25, BlockTags.INCORRECT_FOR_GOLD_TOOL, ItemTags.GOLD_TOOL_MATERIALS,
-        "gold_ingot", 6.0F, -3.0F, 0.0F, -3.0F);
+        "netherite_ingot", 5.0F, -3.0F, -4.0F, 0.0F);
 
     private final String id;
     private final String displayName;
